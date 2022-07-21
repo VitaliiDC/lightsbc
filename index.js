@@ -34,6 +34,6 @@ app.post('/', async (req, res) => {
 mongoose.connect('mongodb+srv://Vitalii_Drobit:b8qT3yZkCwRDqE7@cluster0.jn0xs.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
-}).then(() => app.listen(4000, () => {
+}).then(() => app.listen(process.env.PORT, () => {
     console.log('Server has been started');
 }));
