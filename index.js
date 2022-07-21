@@ -31,7 +31,7 @@ app.post('/', async (req, res) => {
     res.json({message: 'saved'});
 })
 
-mongoose.connect('mongodb+srv://Vitalii_Drobit:b8qT3yZkCwRDqE7@cluster0.jn0xs.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect(`mongodb+srv://Vitalii_Drobit:${process.env.PASS}@cluster0.jn0xs.mongodb.net/?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => app.listen(process.env.PORT, () => {
