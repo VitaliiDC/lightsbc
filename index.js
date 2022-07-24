@@ -6,7 +6,9 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(cors({origin: 'https://vitaliidc.github.io', credentials: true}))
+const whiteList = ['http://localhost:3000', 'https://vitaliidc.github.io'];
+
+app.use(cors({origin: whiteList, credentials: true}))
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
